@@ -1,0 +1,405 @@
+{
+  "language": "de",
+  "title": "Beispiel Model",
+  "subtitle": "Eine Demonstration des Data Process Modeler",
+  "participants": [
+    {
+      "id": "1",
+      "label": [
+        "Nutzer"
+      ]
+    },
+    {
+      "id": "2",
+      "label": [
+        "weitere",
+        "Teilnehmer"
+      ]
+    },
+    {
+      "id": "3",
+      "label": [
+        "Server"
+      ]
+    }
+  ],
+  "connectionTypes": [
+    {
+      "id": "ct1",
+      "color": "#7D7D7D",
+      "textColor": "white",
+      "legend": true,
+      "legendOrder": 1,
+      "legendLabel": "Beschreibung der Verbindung",
+      "default": true
+    },
+    {
+      "id": "ct2",
+      "color": "#7D7D7D",
+      "textColor": "white",
+      "strokeDasharray": "6, 6",
+      "legend": true,
+      "legendOrder": 2,
+      "legendLabel": "Beschreibung der Verbindung"
+    },
+    {
+      "id": "ct3",
+      "color": "#7D7D7D",
+      "textColor": "white",
+      "strokeDasharray": "3, 3",
+      "legend": true,
+      "legendOrder": 3,
+      "legendLabel": "Beschreibung der Verbindung"
+    }
+  ],
+  "boxTypes": [
+    {
+      "id": "bt-default",
+      "color": "#ffbd4c",
+      "textColor": "#00A5E6",
+      "colorInactive": "#fff",
+      "textColorInactive": "#00A5E6",
+      "legend": true,
+      "legendOrder": 4,
+      "legendLabel": "Beschreibung des BoxTypen",
+      "sourceDefault": true,
+      "purposeDefault": true,
+      "shortInfoBackground": "#DEDEDE",
+      "shortInfoActiveBackground": "#00A5E6",
+      "infoIconBackground": "#7D7D7D",
+      "infoIconActiveBackground": "#7D7D7D",
+      "policyIconBackground": "#7D7D7D",
+      "policyIconActiveBackground": "#7D7D7D"
+    },
+
+    {
+      "id": "bt-action",
+      "color": "#ffbd4c",
+      "textColor": "#00A5E6",
+      "colorInactive": "#fff",
+      "textColorInactive": "#00A5E6",
+      "actionDefault": true,
+      "shortInfoBackground": "#DEDEDE",
+      "shortInfoActiveBackground": "#00A5E6",
+      "infoIconBackground": "#7D7D7D",
+      "infoIconActiveBackground": "#7D7D7D",
+      "policyIconBackground": "#7D7D7D",
+      "policyIconActiveBackground": "#7D7D7D"
+    }
+  ],
+  "cases": [
+    {
+      "id": "case1",
+      "label": "1. Fall",
+      "info": "<div><p>Eine Info zum 1. Fall</p></div>",
+      "permissions": "<div><p>Benötigte Berechtigungen für diesen Bereich der App:</p><p><ul><li><b>Zugriff auf Bluetooth</b></ul></p></div>",
+      "dataSources": [
+        {
+          "id": "1-ds1",
+          "typeId": "bt-default",
+          "label": [
+            "Eine Datenquelle"
+          ],
+          "info": "<div><p>Eine Info zu einer Datenquelle</p></div>",
+          "position": {
+            "start": 0,
+            "end": 2
+          }
+        }
+      ],
+      "dataPurposes": [
+        {
+          "id": "1-dp1",
+          "typeId": "bt-default",
+          "label": [
+            "Eine Nutzung"
+          ],
+          "position": {
+            "start": 0,
+            "end": 0
+          }
+        },
+        {
+          "id": "1-dp2",
+          "typeId": "bt-default",
+          "label": [
+            "Eine zweite Nutzung"
+          ],
+          "position": {
+            "start": 1,
+            "end": 1
+          }
+        },
+        {
+          "id": "1-dp3",
+          "typeId": "bt-default",
+          "label": [
+            "Eine weitere Nutzung"
+          ],
+          "position": {
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "actions": [
+        {
+          "id": "1-a1",
+          "typeId": "bt-action",
+          "label": [
+            "1. Aktion"
+          ],
+          "info": "<div><p>Aktions Info</p></div>",
+          "erasurePolicy": "Dauerhaft gespeichert",
+          "storagePolicy": "Eigenes Smartphone",
+          "participantID": "1",
+          "position": {
+            "start": 0,
+            "end": 0
+          }
+        },
+        {
+          "id": "1-a2",
+          "typeId": "bt-action",
+          "label": [
+            "2. Aktion"
+          ],
+          "info": "<div><p>Aktions Info</p></div>",
+          "shortInfo": [
+            "kurze Info"
+          ],
+          "erasurePolicy": "14 Tage",
+          "storagePolicy": "Server",
+          "participantID": "1",
+          "position": {
+            "start": 1,
+            "end": 1
+          }
+        },
+        {
+          "id": "1-a3",
+          "typeId": "bt-action",
+          "label": [
+            "3. Aktion"
+          ],
+          "info": "<div><p>Aktions Info</p></div>",
+          "shortInfo": [
+            "kurze Info"
+          ],
+          "erasurePolicy": "keine Speicherung",
+          "storagePolicy": "",
+          "participantID": "1",
+          "position": {
+            "start": 2,
+            "end": 2
+          }
+        },
+        {
+          "id": "1-a4",
+          "typeId": "bt-action",
+          "label": [
+            "4. Aktion"
+          ],
+          "info": "<div><p>Aktions Info</p></div>",
+          "erasurePolicy": "14 Tage",
+          "storagePolicy": "Server",
+          "participantID": "2",
+          "position": {
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "connections": [
+        {
+          "id": "c1",
+          "typeId": "ct1",
+          "label": "Beschreibung der Verbindung",
+          "source": "1-a1",
+          "destination": "1-a2",
+          "position": {
+            "start": 0,
+            "end": 1
+          }
+        },
+        {
+          "id": "c2",
+          "typeId": "ct1",
+          "label": "Beschreibung der Verbindung",
+          "source": "1-a2",
+          "destination": "1-a3",
+          "position": {
+            "start": 1,
+            "end": 2
+          }
+        },
+        {
+          "id": "c3",
+          "typeId": "ct3",
+          "label": "Beschreibung der Verbindung",
+          "source": "1-a3",
+          "destination": "1-a4",
+          "position": {
+            "start": 2,
+            "end": 2
+          }
+        }
+      ],
+      "isOpen": false
+    },
+    {
+      "id": "case2",
+      "label": "2. Fall",
+      "info": "<div><p>Eine Info zum 2. Fall</p></div>",
+      "dataSources": [
+        {
+          "id": "5-dp1",
+          "typeId": "bt-default",
+          "label": [
+            "Eine Datenquelle"
+          ],
+          "shortInfo": [
+            "kurze Info"
+          ],
+          "info": "<div><p>Info zu Datenquelle</p></div>",
+          "position": {
+            "start": 0,
+            "end": 0
+          }
+        }
+      ],
+      "dataPurposes": [
+        {
+          "id": "5-dp1",
+          "typeId": "bt-default",
+          "label": [
+            "Eine Nutzung"
+          ],
+          "info": "<div><p>Zielsetzung Info</p></div>",
+          "position": {
+            "start": 0,
+            "end": 0
+          }
+        }
+      ],
+      "actions": [
+        {
+          "id": "5-a1",
+          "typeId": "bt-action",
+          "label": [
+            "1. Aktion"
+          ],
+          "info": "<div><p>Aktions Info</p></div>",
+          "participantID": "1",
+          "position": {
+            "start": 0,
+            "end": 0
+          }
+        },
+        {
+          "id": "5-a2",
+          "typeId": "bt-action",
+          "label": [
+            "2. Aktion"
+          ],
+          "info": "<div><p>Aktions Info</p></div>",
+          "storagePolicy": "Server",
+          "participantID": "3",
+          "position": {
+            "start": 0,
+            "end": 0
+          }
+        }
+      ],
+      "connections": [
+        {
+          "id": "c1",
+          "typeId": "ct2",
+          "label": "Beschreibung der Verbindung",
+          "source": "5-a1",
+          "destination": "5-a2",
+          "position": {
+            "start": 0,
+            "end": 0
+          }
+        }
+      ],
+      "isOpen": false
+    }
+  ],
+  "sourceInformation": {
+    "id": "si-1",
+    "info": "<div><table><tr><tr><td>Eine Quelle</td></tr></tr></table></div>"
+  },
+  "revisionHistory": {
+    "id": "rh-1",
+    "info": "<div><p><ul><li>Initiale Version 1.0</li></ul></p></div>"
+  },
+  "glossar": [
+    {
+      "id": "g1",
+      "keywords": [
+        "smartphone",
+        "handy"
+      ],
+      "title": "Smartphone",
+      "content": "<div><p>Ist ein mobiles Telefon</p></div>"
+    }
+  ],
+  "isDialogFullsize": true,
+  "isDetailedIcons": false,
+  "fixedLabels": {
+  },
+  "colors": {
+    "canvasBackground": "white",
+    "headerSourceLabel":  "white",
+    "headerSourceIcon": "white",
+    "headerSourceBackground": "#006ba2",
+    "headerSourceArrowBackground": "#006ba2",
+
+    "headerProcessLabel":  "white",
+    "headerProcessIcon": "white",
+    "headerProcessBackground": "#006ba2",
+    "headerProcessArrowLeftBackground": "#006ba2",
+    "headerProcessArrowRightBackground": "#006ba2",
+
+    "headerPurposeLabel":  "white",
+    "headerPurposeIcon": "white",
+    "headerPurposeBackground": "#006ba2",
+    "headerPurposeArrowBackground": "#006ba2",
+
+
+    "caseHeaderLabel": "#00A5E6",
+    "caseHeaderIcon": "#7D7D7D",
+    "caseHeaderBackground": "#fff",
+    "caseBodyBackground": "#fff",
+    "caseBorder": "#3A3D3E",
+
+    "participantLabel": "#3A3D3E",
+    "participantIcon": "#006ba2",
+    "participantBorder": "#f2f2f2",
+    "participantBackground": "#f5f5f5",
+    "participantBackgroundGradient": "url(#gray_gradient)",
+
+    "caseActionIdentifierChecked": "#00A5E6",
+    "caseActionIdentifierUnchecked": "#dedede",
+
+    "legendTriggerLabel": "white",
+    "legendTriggerBackground": "#006ba2",
+    "legendTriggerBackgroundHover": "#00A5E6",
+
+    "modelModeLabel": "white",
+    "modelModeBackground": "#AF4261",
+    "actionShortInfoBackground": "#DEDEDE",
+    "actionShortInfoRelatedBackground": "#BC1200",
+    "actionInfoIcon": "#7D7D7D",
+    "actionPolicyIcon": "#7D7D7D",
+    "actionRelatedPolicyIcon": "#BC1200",
+    "textEllipsisBackground": "#00A5E6",
+    "textEllipsisLabel": "#fff",
+    "policyBackground": "#BC1200",
+    "policyIcon": "#fff",
+    "policyLabel": "#fff",
+    "glossarKeyword": "#BC1200"
+  }
+}
