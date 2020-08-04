@@ -115,11 +115,23 @@ const CreditsDialog: React.FunctionComponent<Props> = props => {
             </a>
 
           </div>
+
+          {props.language.legalDisclaimer && (
+              <div css={theme => ([{
+                marginTop: '5%',
+                paddingTop: '1%',
+                display: 'flex',
+                justifyContent: 'spacing-around',
+                alignItems: 'center',
+                borderTop: '1px solid'
+              }])} dangerouslySetInnerHTML={{ __html: props.language.legalDisclaimer }}/>
+          )}
+
           <div css={theme => ([{
-            marginTop: '5%',
+            marginTop: '1%',
             paddingTop: '1%',
             display: 'flex',
-            justifyContent: 'spaceing-around',
+            justifyContent: 'spacing-around',
             alignItems: 'center',
             borderTop: '1px solid'
           }])}>

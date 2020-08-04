@@ -152,6 +152,7 @@ export type FixedLabels = {
   toolDescription?: string;
   implementationBy?: string;
   sponsoredBy?: string;
+  legalDisclaimer?: string;
 }
 
 export type Colors = {

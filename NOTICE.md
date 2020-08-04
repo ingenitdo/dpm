@@ -1,7 +1,7 @@
 Copyright 2020 Zentrum Digitalisierung.Bayern
 
 This project was funded by the 
-Bayer. Staatsministerium für Umwelt und Verbraucherschutz.
+Bayer. Staatsministerium fÃ¼r Umwelt und Verbraucherschutz.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
